@@ -1,6 +1,5 @@
 # prueba
 
-[![Build Status](https://travis-ci.org/tdd-organization-afp/DatosDemograficos.svg?branch=master)](https://travis-ci.org/github/PedroMFC/prueba)
+[![Build Status](https://travis-ci.org/PedroMFC/prueba.svg?branch=main)](https://travis-ci.org/PedroMFC/prueba)
 
-
-[![codecov](https://codecov.io/gh/tdd-organization-afp/DatosDemograficos/branch/master/graph/badge.svg)](https://codecov.io/gh/PedroMFC/prueba)
+[![codecov](https://codecov.io/gh/PedroMFC/prueba/branch/main/graph/badge.svg?token=MMMPXM2YF2)]([undefined](https://codecov.io/gh/PedroMFC/prueba))
