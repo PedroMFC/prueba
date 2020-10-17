@@ -9,7 +9,7 @@ import (
 
 // Librería estandar de Golang
 func TestHello(t *testing.T) {
-	want := "Hola Mundo."
+	want := "Hello, world."
 	if got := Hello(); got != want {
 		t.Errorf("Hello() = %q, want %q", got, want)
 	}
