@@ -6,7 +6,7 @@ env:
 - GO111MODULE=on
 dist: trusty
 install: 
-- go mod download
+- go get "rsc.io/quote"
 script:
 - go build
 - go test
