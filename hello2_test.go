@@ -15,7 +15,7 @@ func TestHello(t *testing.T) {
 
 func TestSomething(t *testing.T) {
 
-	var a string = "Heo"
+	var a string = "Hello"
 	var b string = "Hello"
   
 	assert.Equal(t, a, b, "The two words should be the same.")
