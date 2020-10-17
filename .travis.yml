@@ -6,6 +6,8 @@ env:
 - GO111MODULE=on
 
 install: 
+# DESCOMENTAR SI SE USA TASK 
+#- snap install task --classic
 - go mod download
 script:
 - go build

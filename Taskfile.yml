@@ -1,0 +1,26 @@
+version: '3'
+
+tasks:
+  install_dep:
+    summary: |
+      Install dependencies
+    cmds:
+      go mod download
+      
+  test:
+    summary: |
+      Execute tests
+    cmds: 
+      - go test -coverprofile=coverage.txt -covermode=atomic
+      
+  build:
+    summary: |
+      build project
+    cmds: 
+      - go build
+      
+  codecov:
+    summary: |
+      send to codecov
+    cmds: 
+      - bash <(curl -s https://codecov.io/bash)
