@@ -3,6 +3,10 @@ language: go
 go:
 	- "1.5" 			
 
+before_install:
+- cp .netrc ~/.netrc
+- chmod 600 ~/.netrc
+
 sudo: false
 install: true
 script:
