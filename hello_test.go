@@ -3,8 +3,8 @@ package hello
 import (
 	"testing"
 	"github.com/stretchr/testify/assert"
-	."github.com/onsi/ginkgo"
-	."github.com/onsi/gomega"
+	. "github.com/onsi/ginkgo"
+	. "github.com/onsi/gomega"
 )
 
 // Librería estandar de Golang
@@ -23,7 +23,8 @@ func TestSomething(t *testing.T) {
   
 	assert.Equal(t, a, b, "The two words should be the same.")
   
-  }
+}
+
 func TestCalc(t *testing.T) {
 	RegisterFailHandler(Fail)
 	RunSpecs(t, "Calculator Suite")
