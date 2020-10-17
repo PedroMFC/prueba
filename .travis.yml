@@ -5,7 +5,8 @@ go:
 env:
 - GO111MODULE=on
 dist: trusty
-install: true
+install: 
+- go mod download
 script:
 - go build
 - go test
