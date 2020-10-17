@@ -9,4 +9,4 @@ sudo: false
 install: true
 script:
 - go build
-- go script
+- go test
