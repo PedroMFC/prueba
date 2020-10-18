@@ -12,7 +12,7 @@ install:
 - go mod download
 script:
 - go build
-- go run main.go
+- go run ./main/main.go
 - go test -coverprofile=coverage.txt -covermode=atomic 
 #- go test -coverprofile=coverage.txt -covermode=atomic -v
 
