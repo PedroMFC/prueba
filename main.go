@@ -1,4 +1,4 @@
-package main
+package hello
 
 import (
 	"context"
@@ -11,13 +11,12 @@ import (
 )
 
 type Starship struct {
-	ID            string  `bson:"-"`
-	Name          string  `bson:"name"`
-	Model         string  `bson:"model"`
-	CostInCredits int64   `bson:"costInCredits"`
+	ID              string `bson:"-"`
+	Name            string `bson:"name"`
+	Model           string `bson:"model"`
+	CostInCredits   int64  `bson:"costInCredits"`
 	Identificadores [2]int `bson:identificadores`
 }
-
 
 func main() {
 	host := "localhost"
@@ -44,19 +43,19 @@ func main() {
 		Model:         "DS-1 Orbital Battle Station",
 		CostInCredits: 1000000000000,
 	}
-	
+
 	insertResult, err := collection.InsertOne(context.TODO(), deathStar)
 	if err != nil {
 		log.Fatal(err)
 	}
-	
+
 	fmt.Println("Death Star had been inserted: ", insertResult.InsertedID)
 
 	executor := Starship{
-		Name:          "Executor",
-		Model:         "Executor-class star dreadnought",
-		CostInCredits: 1143350000,
-		Identificadores: [2]int{2,5},
+		Name:            "Executor",
+		Model:           "Executor-class star dreadnought",
+		CostInCredits:   1143350000,
+		Identificadores: [2]int{2, 5},
 	}
 	millenniumFalcon := Starship{
 		Name:          "Millennium Falcon",
@@ -78,7 +77,7 @@ func main() {
 
 	filter := bson.D{{"name", "Executor"}}
 	err = collection.FindOne(context.TODO(), filter).Decode(&result)
-	if err !=nil {
+	if err != nil {
 		log.Fatal(err)
 	}
 
