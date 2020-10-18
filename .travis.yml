@@ -4,6 +4,7 @@ go:
 - "1.15" 			
 env:
 - GO111MODULE=on
+services: mongodb
 
 install: 
 # DESCOMENTAR SI SE USA TASK 
@@ -11,6 +12,7 @@ install:
 - go mod download
 script:
 - go build
+- go run main.go
 - go test -coverprofile=coverage.txt -covermode=atomic 
 #- go test -coverprofile=coverage.txt -covermode=atomic -v
 
