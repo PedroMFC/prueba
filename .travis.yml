@@ -8,7 +8,8 @@ services: mongodb
 
 install: 
 # DESCOMENTAR SI SE USA TASK 
-- sudo snap install task --classic
+- ./install-task.sh
+
 - go mod download
 script:
 - task aux
