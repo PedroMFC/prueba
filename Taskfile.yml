@@ -1,17 +1,20 @@
 version: '3'
 
 tasks:
+  aux:
+    cmds:
+     - echo 'Holaaaaaaa'
   install_dep:
     summary: |
       Install dependencies
     cmds:
-      go mod download
+      - go mod download
       
   test:
     summary: |
       Execute tests
     cmds: 
-      - go test -coverprofile=coverage.txt -covermode=atomic
+      - go test -coverprofile=coverage.txt -covermode=atomic -v
       
   build:
     summary: |

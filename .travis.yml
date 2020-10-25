@@ -8,9 +8,10 @@ services: mongodb
 
 install: 
 # DESCOMENTAR SI SE USA TASK 
-#- snap install task --classic
+- snap install task --classic
 - go mod download
 script:
+- task aux
 - go build
 - go run ./main/main.go
 - go test -coverprofile=coverage.txt -covermode=atomic 
