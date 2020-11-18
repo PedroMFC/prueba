@@ -1,12 +1,17 @@
-steps:
-  - uses: actions/checkout@v2.3.2
-    name: Check out code
+name: Subir a github packages
+on: push
+jobs:
+  my-job:
+    name: My Job
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.3.2
+        name: Check out code
 
-  - uses: mr-smithers-excellent/docker-build-push@v5
-    name:  Build & push Docker image
-    with:
-      image: pedromfc/evaluaugr
-      registry: ghcr.io
-      githubOrg: override-org # optional
-      username: ${{ github.actor }}
-      password: ${{ secrets.GITHUB_TOKEN }} 
+      - uses: mr-smithers-excellent/docker-build-push@v5
+        with:
+          image: pedromfc/evaluaugr
+          registry: ghcr.io
+          githubOrg: override-org # optional
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }} 
