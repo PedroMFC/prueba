@@ -11,13 +11,13 @@ jobs:
      # - uses: mr-smithers-excellent/docker-build-push@v3
      #   with:
      #     image: evaluaugr/test-go-alpine
-     #    registry: docker.pkg.github.com
+     #     registry: docker.pkg.github.com
      #     username: ${{ github.actor }}
      #     password: ${{ secrets.DOCKER_TOKEN }} 
 
       - uses: mr-smithers-excellent/docker-build-push@v3
-          with:
-            image: pedromfc/evaluaugr
-            registry: docker.io
-            username: ${{ secrets.DOCKER_USERNAME }}
-            password: ${{ secrets.DOCKER_PASSWORD }}
+        with:
+          image: pedromfc/evaluaugr
+          registry: docker.io
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
