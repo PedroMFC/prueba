@@ -1,3 +1,5 @@
+# https://github.com/marketplace/actions/docker-build-tag-push
+
 name: Subir a github packages
 on: push
 jobs:
@@ -15,9 +17,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.DOCKER_TOKEN }} 
 
-      - uses: mr-smithers-excellent/docker-build-push@v3
-        with:
-          image: pedromfc/prueba
-          registry: docker.io
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+      #- uses: mr-smithers-excellent/docker-build-push@v3
+      #  with:
+      #    image: pedromfc/prueba
+      #    registry: docker.io
+      #    username: ${{ secrets.DOCKER_USERNAME }}
+      #    password: ${{ secrets.DOCKER_PASSWORD }}
