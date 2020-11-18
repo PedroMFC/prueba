@@ -7,7 +7,9 @@ env:
 services: mongodb
 
 install: 
-# DESCOMENTAR SI SE USA TASK 
+# instalar median sh
+# o
+# - sudo snap install task --classic
 - ./install-task.sh
 
 - go mod download
