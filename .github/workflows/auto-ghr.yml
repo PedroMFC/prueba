@@ -12,6 +12,5 @@ jobs:
         with:
           image: pedromfc/evaluaugr
           registry: ghcr.io
-          githubOrg: override-org # optional
-          username: ${{ github.actor }}
+          username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }} 
