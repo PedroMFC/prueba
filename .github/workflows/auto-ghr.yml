@@ -1,7 +1,10 @@
 # https://github.com/marketplace/actions/docker-build-tag-push
 
 name: Subir a github packages
-on: push
+on: 
+  push:
+    paths:
+      - 'Dockerfile'
 jobs:
   my-job:
     name: My Job 2

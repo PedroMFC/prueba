@@ -3,4 +3,4 @@ FROM alpine:latest
 WORKDIR ./
 
 ENTRYPOINT [ "echo" ]
-CMD ["hola"]
+CMD ["hola"]T
