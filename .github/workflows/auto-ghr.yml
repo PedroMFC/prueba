@@ -16,8 +16,9 @@ jobs:
       - name: log
         run: |
           echo ${{ secrets.DOCKER_TOKEN}} | docker login ghcr.io -u PedroMFC --password-stdin
-          docker push ghcr.io/github/octoshift:$GITHUB_SHA
-          
+          docker build . --tag ghcr.io/github/prueba/test:$GITHUB_SHA .
+          docker push ghcr.io/github/prueba:$GITHUB_SHA
+
       #- uses: mr-smithers-excellent/docker-build-push@v3
       #  with:
       #    image: pedromfc/prueba
