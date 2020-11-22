@@ -15,8 +15,8 @@ jobs:
 
       - uses: mr-smithers-excellent/docker-build-push@v3
         with:
-          image: evaluaugr/test-go-alpine
-          registry: docker.pkg.github.com
+          image: prueba/test
+          registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.DOCKER_TOKEN }} 
 
