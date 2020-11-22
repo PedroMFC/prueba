@@ -15,7 +15,7 @@ jobs:
 
       - uses: mr-smithers-excellent/docker-build-push@v3
         with:
-          image: prueba/test
+          image: prueba
           registry: ghcr.io/github
           username: ${{ github.actor }}
           password: ${{ secrets.DOCKER_TOKEN }} 
