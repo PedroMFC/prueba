@@ -5,13 +5,14 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+/*
 func TestHello(t *testing.T) {
 	want := "Hello, world."
 	if got := Hello(); got != want {
 		t.Errorf("Hello() = %q, want %q", got, want)
 	}
 }
-
+*/
 
 func TestSomething(t *testing.T) {
 
