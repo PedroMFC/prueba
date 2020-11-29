@@ -1,7 +1,10 @@
 # appveyor.yml
 build: off
 
-stack: go 1.15
+stack: 
+  - go 1.15
+  - go 1.14
+  - go 1.13
 
 test_script:
   - go test -v
