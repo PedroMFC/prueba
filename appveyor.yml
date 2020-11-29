@@ -1,9 +1,6 @@
 # appveyor.yml
 build: off
 
-environment:
-  GOPATH: /usr/go/
-
 stack: go 1.15
 
 test_script:
