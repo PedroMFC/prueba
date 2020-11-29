@@ -17,6 +17,19 @@ tasks:
       #- go test -coverprofile=coverage.txt -covermode=atomic -v
       - go test -v
       
+  docker_local:
+    summary: |
+      Execute local
+    cmds: 
+      #- go test -coverprofile=coverage.txt -covermode=atomic -v
+      - docker run --rm -t -v `pwd`:/app/test pedromfc/evaluaugr
+      
+  docker_travis:
+    summary: |
+      Execute docker in travis
+    cmds: 
+      - docker run -t -v $TRAVIS_BUILD_DIR:/app/test pedromfc/evaluaugr
+      
   build:
     summary: |
       build project

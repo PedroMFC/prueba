@@ -7,4 +7,4 @@ install:
   - docker pull pedromfc/evaluaugr
 
 script:
-  - docker run -t -v $TRAVIS_BUILD_DIR:/app/test pedromfc/evaluaugr
+  - task docker_travis

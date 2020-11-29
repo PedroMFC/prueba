@@ -2,9 +2,13 @@
 build: off
 
 stack: 
-  - go 1.15
-  - go 1.14
-  - go 1.13
+  - go 1.14.12
+  - go 1.13.15
+  - go 1.12.17
+  - go 1.11.13
+
+before_test:
+  - sh -c "$(curl -ssL https://taskfile.dev/install.sh)" -- -d
 
 test_script:
-  - go test -v
+  - task test
