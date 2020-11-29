@@ -14,7 +14,8 @@ tasks:
     summary: |
       Execute tests
     cmds: 
-      - go test -coverprofile=coverage.txt -covermode=atomic -v
+      #- go test -coverprofile=coverage.txt -covermode=atomic -v
+      - go test ./tests/ -v
       
   build:
     summary: |

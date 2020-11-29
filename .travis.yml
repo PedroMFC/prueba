@@ -1,25 +1,10 @@
-language: go
+languages: minimal
 
-go:
-- "1.15" 			
-env:
-- GO111MODULE=on
-services: mongodb
+services:
+  - docker
 
-install: 
-# instalar median sh
-# o
-# - sudo snap install task --classic
-- ./install-task.sh
+install:
+  - docker pull pedromfc/evaluaugr
 
-- go mod download
 script:
-- task aux
-- go build
-- go run ./main/main.go
-- go test -coverprofile=coverage.txt -covermode=atomic 
-#- go test -coverprofile=coverage.txt -covermode=atomic -v
-
-#Codecov
-after_success:
-- bash <(curl -s https://codecov.io/bash)
+  - docker run -t -v $TRAVIS_BUILD_DIR:/app/test pedromfc/evaluaugr
