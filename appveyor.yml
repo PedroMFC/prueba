@@ -1,0 +1,12 @@
+# appveyor.yml
+build: off
+
+clone_folder: /usr/go/src/github.com/pedromfc/prueba
+
+environment:
+  GOPATH: /usr/go/
+
+stack: go 1.15
+
+test_script:
+  - go test -v
