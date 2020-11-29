@@ -1,8 +1,6 @@
 # appveyor.yml
 build: off
 
-clone_folder: /usr/go/src/github.com/pedromfc/prueba
-
 environment:
   GOPATH: /usr/go/
 
