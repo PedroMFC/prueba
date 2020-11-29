@@ -8,7 +8,7 @@ stack:
   - go 1.11.13
 
 before_test:
-  - sh -c "$(curl -ssL https://taskfile.dev/install.sh)" -- -d
+  - ./install-task.sh
 
 test_script:
   - task test
