@@ -5,6 +5,7 @@ services:
 
 install:
   - docker pull pedromfc/evaluaugr
+  - ./install-task.sh
 
 script:
   - task docker_travis

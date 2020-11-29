@@ -1,4 +1,6 @@
 # appveyor.yml
+image: Ubuntu
+
 build: off
 
 stack: 
@@ -7,7 +9,7 @@ stack:
   - go 1.12.17
   - go 1.11.13
 
-before_test:
+install:
   - ./install-task.sh
 
 test_script:
